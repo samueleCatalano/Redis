@@ -19,11 +19,11 @@ public class UserService {
     UserRedisRepository userRedisRepository;
 
     public List<UserJPA> get() {
-      return   userJPARepository.findAll();
+      return userJPARepository.findAll();
     }
 
-    public UserJPA post(UserJPA userJPA) {
-        return userJPARepository.save(userJPA);
+    public void post(UserJPA userJPA) {
+         userJPARepository.saveAndFlush(userJPA);
     }
 
     public void update(String id, UserJPA userJPA) {

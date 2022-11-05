@@ -12,16 +12,16 @@ import org.springframework.data.redis.core.RedisTemplate;
 @Configuration
 public class RedisCacheConfiguration {
 
-    @Value("redis-19679.c9.us-east-1-2.ec2.cloud.redislabs.com:19679\n")
+    @Value("${redis.host}")
     private String redisHost;
 
-    @Value("19679")
+    @Value("${redis.port}")
     private int redisPort;
 
-    @Value("vEtESnyrLb8aWEtj31VkmYHKFmyWZPER")
+    @Value("${redis.password}")
     private String redisPassword;
 
-    @Value("Samuele-free-db")
+    @Value("${redis.database}")
     private String redisDatabase;
 
     @Bean

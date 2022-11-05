@@ -14,12 +14,12 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping
+    @GetMapping("/")
     public List<UserJPA> get(){
         return userService.get();
     }
 
-    @PostMapping
+    @PostMapping("/")
     public void post(UserJPA user){
         userService.post(user);
     }
