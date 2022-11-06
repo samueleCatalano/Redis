@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @PostMapping("/")
-    public void post(UserJPA user){
+    public void post(@RequestBody UserJPA user){
         userService.post(user);
     }
 
